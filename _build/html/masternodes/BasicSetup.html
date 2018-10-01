@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="This guide describes how to set up a Rupaya masternode. It also describes various options for hosting and different wallets" name="description" />
+<meta content="rupaya, rupx, guide, masternodes" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basic-Setup &mdash; Rupaya 5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced Topics" href="topics.html" />
+    <link rel="prev" title="Advanced-Setup" href="advancedsetup.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+    <meta name="author" content="Rupaya Core Team" />
+    <meta name="copyright" content="© Copyright 2018 Rupaya Core Team" />
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/Rupaya-logo-white.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/about.html">What is Rupaya?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/about.html#white-paper">White Paper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/about.html#roadmap">Roadmap</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/features.html">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/features.html#specifications">Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/features.html#masternodes">Masternodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/how-to-buy.html">How To Buy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/how-to-buy.html#exchanges">Exchanges</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/how-to-buy.html#coinmarketcap">CoinMarketCap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/how-to-buy.html#rupaya-markets">Rupaya markets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/how-to-buy.html#list-of-exchanges">List of exchanges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/safety.html#scams">Scams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/safety.html#ponzi-schemes">Ponzi Schemes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/information.html">Links and Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/information.html#links">Links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#official-sites">Official sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#chat">Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#social-media">Social media</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#facebook">Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#twitter">Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#blogs">Blogs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/information.html#tools">Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#block-explorers-statistics-and-visualizations">Block explorers, statistics and visualizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#treasury-tools">Treasury tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#masternode-management">Masternode management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#price-monitoring-and-statistics">Price monitoring and statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/information.html#mobile-apps">Mobile Apps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#ios">iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/information.html#android">Android</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/information.html#glossary">Glossary</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/index.html">Wallets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../users/index.html#rupaya-core-wallet">Rupaya Core Wallet</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Merchants</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../merchants/about.html">Getting Started</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Network</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Masternodes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="masternodes101.html">Masternodes 101</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hosted.html">Hosted Service Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advancedsetup.html">Advanced-Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic-Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topics.html">Advanced Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Rupaya</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Masternodes</a> &raquo;</li>
+        
+      <li>Basic-Setup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/masternodes/basicsetup.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-setup">
+<span id="setup"></span><h1>Basic-Setup<a class="headerlink" href="#basic-setup" title="Permalink to this headline">¶</a></h1>
+<p># Rupaya Hot + Cold wallet MasterNode setup guide</p>
+<p>&gt; This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!</p>
+<p>&gt; The guide takes the time to explain not just _How_ but also _Why_ we do certain things. By using Linux for the hot wallet you’ll have the opportunity to expand your knowledge into the open source, highly available and performat operating system that powers the Internet. I’ll close this though with a quote by Benjamin Franklin: “An investment in knowledge pays the best interest”</p>
+<p>&gt; It’s very common in this industry for scammers to offer “help” via remote screen sharing(TeamViewer, Skype, Zoom, WebEx, etc).
+They will use nicknames like <cite>Masternode Helper</cite>, <cite>Masternode Support</cite>, <cite>Cryptopia Support</cite> and will be very nice and helpful to you. At least until they manage to run a command like <cite>dumpprivkey</cite>, <cite>sendtoaddress</cite> and your funds will be gone, adios, sayonara.
+Please be aware and stay safe!</p>
+<p>—</p>
+<p>## Setup overview</p>
+<p>### Hot Wallet
+In this guide, we refer to <strong>Hot</strong> wallet as the Rypaya wallet (Linux or Windows) that is running on the MasterNode server, with public IP address on it, providing services to the blockchain network for which it’s rewarded with coins.
+It’s <strong>Hot</strong> because it’s out on the public internet 24/7, directly accessible on the peer-to-peer port (TCP <strong>9050</strong>), much more vulnerable than a <strong>Cold</strong> wallet.
+That’s why we are running it with a balance of 0 coins.</p>
+<p>It’s strongly recommended not to run a MasterNode Hot wallet at home! See a list of reasons [here](mn_dont_do_this_at_home.md).</p>
+<p>### Cold Wallet
+On the other side, the <strong>Cold</strong> wallet (Windows, OSX, Linux) holds the RUPX collateral (<strong>20,000</strong> RUPX) and is used to enable the MasterNode server and collect rewards for its services.</p>
+<p>This is normally run at home, behind a firewall, and after the MasterNode is enabled it can even be run without direct connectivity from the internet, making it a more secure wallet. Once the MasterNode is enabled the local wallet can then be closed and the MasterNode rewards will still show up the next time the wallet is started and synced.</p>
+<p>—</p>
+<p>We are going to setup the Hot wallet first. This will reduce the overall time as the Hot wallet will sync the blockchain while we setup the Cold wallet. It also requires less back-and-forth between the two.</p>
+<p>## <strong>Hot</strong> MasterNode VPS Setup(Part 1) with Linux CLI only wallet</p>
+<p>This will run 24/7 and provide services to the network via TCP port <strong>9050</strong> for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.</p>
+<p>### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc.</p>
+<p>Requirements:
+* Linux 64 bit, (e.g. Ubuntu <strong>16.04</strong>) running on a server in the cloud 24/7. e.g: VPS such as Vultr, Amazon EC2 instance, Azure instance
+* Dedicated Public IP Address
+* Recommended at least 1GB of RAM and 20GB of disk space
+* Basic Linux skills</p>
+<p>You can get servers like this for $5 a month and can run 3 to 4 MasterNode wallets, from different coins, if the monthly cost is a concern.</p>
+<p>### 2. Login via SSH into the server and type the following command in the console as root:</p>
+<p>If you are using Windows, [PuTTY](<a class="reference external" href="https://putty.org">https://putty.org</a>) is a very good SSH client that you can use to connect to a remote Linux server.
+If you are running a VPS from Vultr or similar, you need to use SSH such as putty if you want to copy and paste these commands otherwise you will have to type them all out!</p>
+<p>### 3. Configure swap to avoid running out of memory if you don’t have a swap :</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">fallocate</span> <span class="pre">-l</span> <span class="pre">3000M</span> <span class="pre">/mnt/3000MB.swap</span>
+<span class="pre">dd</span> <span class="pre">if=/dev/zero</span> <span class="pre">of=/mnt/3000MB.swap</span> <span class="pre">bs=1024</span> <span class="pre">count=3072000</span>
+<span class="pre">mkswap</span> <span class="pre">/mnt/3000MB.swap</span>
+<span class="pre">swapon</span> <span class="pre">/mnt/3000MB.swap</span>
+<span class="pre">chmod</span> <span class="pre">600</span> <span class="pre">/mnt/3000MB.swap</span>
+<span class="pre">echo</span> <span class="pre">'/mnt/3000MB.swap</span>&#160; <span class="pre">none</span>&#160; <span class="pre">swap</span>&#160; <span class="pre">sw</span> <span class="pre">0</span>&#160; <span class="pre">0'</span> <span class="pre">&gt;&gt;</span> <span class="pre">/etc/fstab</span>
+<span class="pre">`</span></code></p>
+<p>### 4. Allow SSH and MasterNode p2p communication port through the OS firewall:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">ufw</span> <span class="pre">allow</span> <span class="pre">22/tcp</span>
+<span class="pre">ufw</span> <span class="pre">limit</span> <span class="pre">22/tcp</span>
+<span class="pre">ufw</span> <span class="pre">allow</span> <span class="pre">9050/tcp</span>
+<span class="pre">ufw</span> <span class="pre">logging</span> <span class="pre">on</span>
+<span class="pre">ufw</span> <span class="pre">--force</span> <span class="pre">enable</span>
+<span class="pre">`</span></code></p>
+<p>If you are running the MasterNode server in Amazon AWS or if additional firewalls are in place, you need to allow incoming connections on port TCP <strong>9050</strong> from any IP address.</p>
+<p>### 5. Install the Rupaya CLI wallet. Always download the latest [release available](<a class="reference external" href="https://github.com/rupaya-project/rupaya/releases">https://github.com/rupaya-project/rupaya/releases</a>), unpack it</p>
+<p>Download and unpack the Rupaya wallet binaries by running the following commands:</p>
+<p>This command uses a short github url to download [linux-x64.tar.gz](<a class="reference external" href="https://s3-us-west-2.amazonaws.com/rupayax/75.1/linux-x64.tar.gz">https://s3-us-west-2.amazonaws.com/rupayax/75.1/linux-x64.tar.gz</a>) and unpack the binaries in the PATH:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">wget</span> <span class="pre">https://s3-us-west-2.amazonaws.com/rupayax/75.1/linux-x64.tar.gz</span>
+<span class="pre">sudo</span> <span class="pre">tar</span> <span class="pre">xvzf</span> <span class="pre">linux-x64.tar.gz</span> <span class="pre">-C</span> <span class="pre">/usr/local/bin/</span>
+<span class="pre">rupayad</span>
+<span class="pre">`</span></code></p>
+<p>You’ll get a start error like <cite>Error: To use rupayad, or the -server option to rupaya-qt, you must set an rpcpassword in the configuration file</cite>. It’s expected because we haven’t created the config file yet.</p>
+<p>The service will only start for a second and create the initial data directory(<cite>/root/.rupayacore/</cite>).</p>
+<p>### 6. Edit the MasterNode main wallet configuration file:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">nano</span> <span class="pre">/root/.rupayacore/rupaya.conf</span>
+<span class="pre">`</span></code></p>
+<p>Enter this wallet configuration data and change accordingly:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rpcuser=&lt;alphanumeric_rpc_username&gt;</span>
+<span class="pre">rpcpassword=&lt;alphanumeric_rpc_password&gt;</span>
+<span class="pre">rpcport=7020</span>
+<span class="pre">rpcallowip=127.0.0.1</span>
+<span class="pre">rpcconnect=127.0.0.1</span>
+<span class="pre">rpcbind=127.0.0.1</span>
+<span class="pre">maxconnections=512</span>
+<span class="pre">listen=1</span>
+<span class="pre">daemon=1</span>
+<span class="pre">externalip=&lt;public_mn_ip_address_here&gt;:9050</span>
+<span class="pre">masternodeaddr=&lt;public_mn_ip_address_here&gt;:9050</span>
+<span class="pre">addnode=seeds.rupx.io</span>
+<span class="pre">`</span></code>
+You can right click in SSH (putty) to paste all of the above</p>
+<p>Exit the editor by CTRL+X and hit Y + ENTER to commit your changes.</p>
+<p>This is a real example:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rpcuser=rupxuser</span>
+<span class="pre">rpcpassword=someSUPERsecurePASSWORD3746375620</span>
+<span class="pre">rpcport=7020</span>
+<span class="pre">rpcallowip=127.0.0.1</span>
+<span class="pre">rpcconnect=127.0.0.1</span>
+<span class="pre">rpcbind=127.0.0.1</span>
+<span class="pre">maxconnections=512</span>
+<span class="pre">listen=1</span>
+<span class="pre">daemon=1</span>
+<span class="pre">externalip=199.247.10.25:9050</span>
+<span class="pre">masternodeaddr=199.247.10.25:9050</span>
+<span class="pre">addnode=seeds.rupx.io</span>
+<span class="pre">`</span></code></p>
+<p>The IP address (<cite>199.247.10.25</cite> in this example) will be different for you. Use the <cite>ifconfig</cite> command to find out your IP address, normally the address of the <cite>eth0</cite> interface. We are going to use this IP and port (9050) in the Cold Wallet setup(Step 2) as well.</p>
+<p>### 7. Start the service and let’s obtain the value for <cite>masternodeprivkey</cite>:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rupayad</span>
+<span class="pre">`</span></code></p>
+<p>Wait a few seconds then run this command to generate the masternode private key:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rupaya-cli</span> <span class="pre">masternode</span> <span class="pre">genkey</span>
+<span class="pre">`</span></code></p>
+<p>Copy to your clipboard the value returned, similar to this:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">87LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK</span>
+<span class="pre">`</span></code></p>
+<p>Edit the configuration file again:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">nano</span> <span class="pre">/root/.rupayacore/rupaya.conf</span>
+<span class="pre">`</span></code></p>
+<p>Add these two lines at the end of the file. The second line is taking the value you received from the <cite>rupaya-cli masternode genkey</cite> command:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">masternode=1</span>
+<span class="pre">masternodeprivkey=&lt;your_masternode_genkey_output&gt;</span>
+<span class="pre">`</span></code></p>
+<p>In my case this was:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">masternode=1</span>
+<span class="pre">masternodeprivkey=87LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK</span>
+<span class="pre">`</span></code></p>
+<p>Exit the editor by CTRL+X and hit Y + ENTER to commit your changes.</p>
+<p>Stop the wallet and wait 2 minutes before attempting a start:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rupaya-cli</span> <span class="pre">stop</span> <span class="pre">&amp;&amp;</span> <span class="pre">sleep</span> <span class="pre">120</span>
+<span class="pre">rupayad</span>
+<span class="pre">`</span></code></p>
+<p>### 8. Verify that the wallet is synching the blockchain:
+Run this command every few mins until you see the blocks increasing.
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rupaya-cli</span> <span class="pre">getinfo</span>
+<span class="pre">`</span></code>
+We can now go to the next step while this wallet syncs up with the network and gets social with the other MasterNodes.</p>
+<p>—</p>
+<p>## <strong>Cold</strong> Wallet Setup(Part 2) using the Qt GUI wallet on Windows, OSX, etc</p>
+<p>Requirements:
+* Windows 7 or higher, Mac OS or Linux
+* Outgoing internet access to sync the blockchain and enable the MasterNode remotely</p>
+<p>This is the wallet where the MasterNode collateral will have to be transferred and stored. After the setup is complete, this wallet doesn’t have to run 24/7 and will be the one receiving the rewards.</p>
+<p>### 1. Install and open the Rupaya-Qt wallet on your machine.</p>
+<blockquote>
+<div><ul class="simple">
+<li>If you have a previous Rupaya wallet installed, backup the <cite>wallet.dat</cite>, uninstall it then delete its original data directory.</li>
+<li>Download the newest Rupaya Qt wallet from: <a class="reference external" href="https://github.com/rupaya-project/rupaya/releases">https://github.com/rupaya-project/rupaya/releases</a></li>
+<li>The Windows wallet needs to be extracted to a permanent location, OSX Wallet goes into <cite>Applications</cite></li>
+<li>Start the wallet software and ignore the unidentified developer warning</li>
+<li>If you are prompted to Allow Access by the firewall, do so</li>
+<li>Let the wallet sync until you see this in the bottom right corner of your Wallet ![Wallet Sync Completed](images/qt-wallet-sync.png “Wallet Sync Completed”)</li>
+<li>If the wallet is not synching, add this line in the configuration file:</li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">addnode=seeds.rupx.io</span>
+<span class="pre">`</span></code></p>
+<p>The Qt wallet will open the configuration from <cite>Tools</cite> &gt; <cite>Open Wallet Configuration File</cite>. Restart the wallet every time you update the configuration.</p>
+</div></blockquote>
+<p>### 2. Create a receiving address for the Masternode collateral funds.</p>
+<blockquote>
+<div><p>Go to File -&gt; Receiving addresses…</p>
+<p>Click <strong>New</strong>, type in a label and press <strong>Ok</strong>.</p>
+</div></blockquote>
+<p>![Create Collateral Address](images/qt-wallet-new-collateral-address.png “Create Collateral Address”)</p>
+<p>Select the row of the newly added address and click <strong>Copy</strong> to store the destination address in the clipboard.</p>
+<p>### 3. Send EXACTLY 20000 RUPX coins to the address you just copied. Double check you’ve got the correct address before transferring the funds.
+If you are sending from an exchange, make sure you account for the withdrawal fee so that you get EXACTLY EXACTLY EXACTLY 20000 RUPX in. This is a common error that will cause the next step to not give you the transaction id needed later on.
+For example, to withdraw from <cite>Stocks.Exchange</cite> the exact ammount for a MasterNode, you need to specify the ammount of <strong>20000.001</strong> to account for the fee.</p>
+<p>After sending, you can verify the balance in the Transactions tab. This can take <strong>a few minutes</strong> to be confirmed by the network. Go get a glass of water. No alcoholic beverages please, we are not out of the woods yet.</p>
+<p>### 4. Open the debug console of the wallet in order to type a few commands.</p>
+<p>Go to <cite>Tools</cite> -&gt; <cite>Debug console</cite></p>
+<p>### 5. Run <cite>masternode outputs</cite> command to retrieve the transaction ID of the collateral transfer.</p>
+<p>You should see an output that looks like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">'&quot;txhash&quot;</span> <span class="pre">:</span> <span class="pre">&quot;c19972e47d2a77d3ff23c2dbd8b2b204f9a64a46fed0608ce57cf76ba9216487&quot;,'</span>
+<span class="pre">'&quot;outputidx&quot;</span> <span class="pre">:</span> <span class="pre">1'</span>
+<span class="pre">`</span></code></p>
+<blockquote>
+<div>Both <cite>txhash</cite> and <cite>outputidx</cite> will be used in the next step. <cite>outputidx</cite> can be <cite>0</cite> or <cite>1</cite>, both are valid values</div></blockquote>
+<p>### 6. Go to <cite>Tools</cite> -&gt; <cite>Open Masternode Configuration File</cite> and add a line in the newly opened <cite>masternode.conf</cite> file.</p>
+<p>If you get prompted to choose a program, select a text editor like Notepad/TextEdit to open it.</p>
+<dl class="docutils">
+<dt>These are the default directories for the data directory where this file is stored:</dt>
+<dd><ul class="first last simple">
+<li>Mac: <cite>~/Library/Application Support/Rupaya</cite></li>
+<li>Windows: <cite>~AppDataRoamingRupayacore</cite></li>
+</ul>
+</dd>
+</dl>
+<p>This is an example of what you need in <cite>masternode.conf</cite>.</p>
+<p>The file will contain an example that is commented out(with a # in front). Read it if it helps. Based on the above values, I would add this line in:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">MN1</span> <span class="pre">199.247.10.25:9050</span> <span class="pre">87LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK</span> <span class="pre">c19972e47d2a77d3ff23c2dbd8b2b204f9a64a46fed0608ce57cf76ba9216487</span> <span class="pre">1</span>
+<span class="pre">`</span></code></p>
+<p>Where <cite>MN1</cite> is the node’s alias.</p>
+<p>Where <cite>199.247.10.25</cite> is the external IP of the masternode server that will provide services to the network.</p>
+<p>Where <cite>87LBTcfgkepEddWNFrJcut76rFp9wQG6rgbqPhqHWGvy13A9hJK</cite> is your masternode key from (Part 1), the value used for <cite>masternodeprivkey</cite> in <cite>/root/.rupayacore/rupaya.conf</cite>.</p>
+<p>Where <cite>c19972e47d2a77d3ff23c2dbd8b2b204f9a64a46fed0608ce57cf76ba9216487</cite> is your txhash from <cite>masternode outputs</cite>.</p>
+<p>Where <cite>1</cite> is your outputidx from <cite>masternode outputs</cite>.</p>
+<p>### 7. Restart the Qt wallet to pick up the <cite>masternode.conf</cite> changes.
+### 8. Go to Masternodes tab and check if your newly added masternode is listed.</p>
+<p>If you want to control multiple hot wallets from this cold wallet, you will need to repeat the previous 2-7 steps. The <cite>masternode.conf</cite> file will contain an entry for each masternode that will be added to the network.</p>
+<p>### 9. Enable the MasterNode</p>
+<p>Open <cite>Tools</cite> &gt; <cite>Debug console</cite>.</p>
+<p>Type this command to see all the MasterNodes loaded from the <cite>masternode.conf</cite> file with their current status:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">masternode</span> <span class="pre">list-conf</span>
+<span class="pre">`</span></code></p>
+<p>You should now see the newly added MasterNode with a status of <cite>MISSING</cite>.</p>
+<p>Run the following command, in order to enable it:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">startmasternode</span> <span class="pre">alias</span> <span class="pre">false</span> <span class="pre">MN1</span>
+<span class="pre">`</span></code>
+In this ^ case, the alias of my MasterNode was MN1, in your case, it might be different.</p>
+<p>—</p>
+<p>## Verify that the MasterNode is enabled and contributing to the network</p>
+<p>Switch back to the MasterNode console.
+Give it a few minutes and go to the Linux VPS console and check the status of the masternode with this command:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">rupaya-cli</span> <span class="pre">masternode</span> <span class="pre">status</span>
+<span class="pre">`</span></code></p>
+<p>If you see status <cite>Not capable masternode: Hot node, waiting for remote activation</cite>, you need to wait a bit longer for the blockchain to reach consensus. It’s common to take 30 to 90 minutes before activation can be done.</p>
+<p>If you see status <cite>Masternode successfully started</cite>, you’ve done it, congratulations. Go hug someone now :)
+It will take a few hours until the first rewards start coming in.</p>
+<p>You should now be able to see your MasterNode(s) <strong>ENABLED</strong> on this web page: [<a class="reference external" href="http://mn.rupx.io](http://mn.rupx.io">http://mn.rupx.io](http://mn.rupx.io</a>)</p>
+<p>Cheers !</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="topics.html" class="btn btn-neutral float-right" title="Advanced Topics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advancedsetup.html" class="btn btn-neutral" title="Advanced-Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Rupaya Core Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
